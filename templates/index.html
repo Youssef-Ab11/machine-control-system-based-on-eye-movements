@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>EyeGazer</title>
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../static/style.css">
+  <script type="text/javascript" src="../static/socket.io-client-4.5.0/dist/socket.io.min.js"></script>
+  <script src="../static/jquery.js"></script>
+  <script type=text/javascript> $(function() { $("#start").click(function (event) { $.getJSON('/Start', {},
+    function(data) {}); return false; }); }) </script> <script type=text/javascript> $(function() {
+    $("#stop").click(function (event) { $.getJSON('/Stop', {}, function(data) {}); return false; }); }) </script>
+  <script src="../static/bootstrap/js/bootstrap.bundle.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" width="100%">
+      <img src="../static/images/EyeGazer.ico" class="logo">
+      <a class="navbar-brand" href="#">EyeGazer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto navflex">
+          <li class="nav-item">
+            <a class="nav-link" href="#instructions">Instructions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#livestream">Live Stream</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="mid">
+      <video autoplay muted loop>
+        <source class="embed-responsive" src="../static/images/1.mp4" type="video/mp4">
+      </video>
+      <div class="landing text-center">
+        <h2 class="text-light display-4 font-weight-bold">Use your Eyes to control your computer</h2>
+        <p class="text-light mx-auto ">This software was created using python and OpenCv</p>
+        <a href="#instructions" class="start ">Get Started</a>
+
+      </div>
+    </div>
+  </header>
+
+  <section id="instructions" class="camera py-5 align-bottom " style="height: 100vh;">
+    <div class="row align-items-center container mx-auto my-5">
+      <div class="text col-lg-6 col-md-6 col-12 w-50 pt-5 pb-5">
+        <h6>Before you start</h6>
+        <h2>How to use this software</h2>
+        <p>Instructions:</p>
+        <ul>
+          <li>Look right to move right</li>
+          <li>Look left to move left</li>
+          <li>Look up to move up</li>
+          <li>Look down to look down</li>
+          <li>Open your mouth to start or stop the cursor movement</li>
+          <li>While the cursor is stopped, blink with your right eye to right click</li>
+          <li>While the cursor is stopped, blink with your left eye to left click</li>
+        </ul>
+        <p style="color: #ff7162;">You might need a good lighting source and camera to properly use this software</p>
+        <a href="#livestream">Move to Camera</a>
+      </div>
+      <div class="img col-lg-6 col-md-6 col-12 w-50 pt-5 pb-5 noClick">
+        <img src="../static/images/eyetracker1.png" alt="eye_tracker" class="img-fluid noClick">
+      </div>
+    </div>
+  </section>
+
+
+  <section id="livestream" class="stream  py-5 " style="height: 90vh;">
+    <div class="row align-items-center container my-5 mx-auto ">
+      <div class="img col-lg-6 col-md-6 col-12 w-50 pt-5 pb-5 noClick">
+        <img src="{{ url_for('video') }}" class="img-fluid live noClick" />
+      </div>
+      <div class="text col-lg-6 col-md-6 col-12 w-50 pt-5 pb-5 align-items-center ">
+        <h2>Statistics</h2>
+        <table class="noClick">
+          <tr>
+            <td class="noClick">Left</td>
+            <td class="noClick">Right</td>
+            <td class="noClick">Up</td>
+            <td class="noClick">Down</td>
+            <td class="noClick">Center</td>
+            <td class="noClick">Right Clicks</td>
+            <td class="noClick">Left Clicks</td>
+          </tr>
+          <tr>
+            <td id="left"  class="noClick">0</td>
+            <td id="right"  class="noClick">0</td>
+            <td id="up"  class="noClick">0</td>
+            <td id="down" class="noClick">0</td>
+            <td id="center" class="noClick">0</td>
+            <td id="rightClicks" class="noClick">0</td>
+            <td id="leftClicks" class="noClick">0</td>
+          </tr>
+        </table>
+        <button id="stop" onclick="javascript:window.close();">Stop</button>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="{{url_for('static', filename='script.js')}}"></script>
+  <script src="../static/bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

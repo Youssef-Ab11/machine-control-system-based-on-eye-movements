@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap%27');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navflex {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar {
+  background: #2b2c2e;
+  padding: 1rem 8rem;
+  z-index: 999;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+#navbarSupportedContent>ul>li:nth-child(n)>a {
+  color: white;
+  font-size: 1.1rem;
+  padding: 0 0.8rem;
+
+}
+
+#navbarSupportedContent>ul>li:nth-child(n)>a:hover {
+  color: #1e6ba5;
+}
+
+#navbarSupportedContent>button {
+  background: #1e6ba5;
+  font-weight: 600;
+  padding: 0.4rem 1.4rem;
+  border-radius: 30px;
+  border-color: #1e6ba5;
+}
+
+.mid {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+
+.mid video {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mid .landing {
+  position: relative;
+
+}
+
+.mid .landing p {
+  width: 55%;
+  font-size: 1.1rem;
+  letter-spacing: 0.2px;
+  padding-bottom: 1rem;
+}
+
+.mid .landing a {
+  background: #1e6ba5;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border: 3px solid;
+  border-radius: 30px;
+  border-color: #fff;
+  text-decoration: none;
+  color: #fff;
+}
+
+.mid .landing a:hover {
+  background: #fff;
+  color: #1e6ba5;
+  border: 3px solid;
+  border-radius: 30px;
+  border-color: #1e6ba5;
+
+}
+
+.camera {
+  background: #2b2c2e;
+}
+
+.camera .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: auto;
+}
+
+.camera .text h6 {
+  color: #1e6ba5;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 2px;
+
+}
+
+.camera .text h2 {
+  color: #dde4fe;
+  font-weight: 700;
+  font-size: 2.7rem;
+}
+
+.camera .text p {
+  color: #dde4fe;
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.camera .text a {
+  background: #1e6ba5;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  border-color: #1e6ba5;
+  text-decoration: none;
+  color: #dde4fe;
+
+}
+
+.camera .text ul {
+  color: #dde4fe;
+  font-weight: 300;
+  font-size: 1rem;
+  list-style: none;
+}
+
+
+.stream {
+  background: #dde4fe;
+}
+
+.stream .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: auto;
+}
+
+.stream .text h6 {
+  color: #1e6ba5;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 2px;
+
+}
+
+.stream .text h2 {
+  color: #2b2c2e;
+  font-weight: 700;
+  font-size: 2.7rem;
+}
+
+.stream .text table {
+  color: #2b2c2e;
+  letter-spacing: 0.5px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.stream .text table tr td {
+  color: #2b2c2e;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  width: 14.2%;
+  padding: 1.2rem;
+  font-size: 1.3rem;
+
+}
+
+.stream button {
+  background: #1e6ba5;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  border-color: #1e6ba5;
+  text-decoration: none;
+  color: #dde4fe;
+}
+
+.live {
+  position: relative;
+  right: 10rem;
+  border: 5px solid #2b2c2e;
+}
+
+.noClick {
+  pointer-events: none;
+  outline: none;
+}
+
+.noClick::selection {
+  background-color: transparent;
+}
+
+.logo {
+  width: 4%;
+  padding-right: 1rem;
+}
