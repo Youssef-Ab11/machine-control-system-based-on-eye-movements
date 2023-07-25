@@ -4,7 +4,7 @@ This project is based on the software of [@Antoine-Lamé](https://github.com/ant
 for more details about it feel free to check this reposetory:
 [https://github.com/antoinelame/GazeTracking.git](https://github.com/antoinelame/GazeTracking)
 
-#How to use this software:
+# How to use this software:
 
 Look right to move right
 Look left to move left
